@@ -9,23 +9,22 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const String appTitle = '할 일 리스트';
 
     return MaterialApp(
-      home: Center(
-          child: Container(
-              width: 100,
-              height: 100,
-              color: Colors.red,
-              child: Text(
-                  '박스안의 글자',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    decoration: TextDecoration.none,
-                ),
-              )
-          ),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        fontFamily: 'GmarketSans', // 폰트 적용
+      ),
+      home: Scaffold(
+        appBar: AppBar(
+            title: Text(appTitle),
+            backgroundColor: Colors.cyanAccent
+        ),
+        body: const Center(
+          child: Text('할 일')
+        ),
+        bottomNavigationBar: BottomAppBar(child: Text('하단 바'))
       )
     );
   }
