@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,7 +25,38 @@ class MyApp extends StatelessWidget {
         body: const Center(
           child: Text('할 일')
         ),
-        bottomNavigationBar: BottomAppBar(child: Text('하단 바'))
+        bottomNavigationBar: Container(
+          decoration: const BoxDecoration(
+            border: Border(
+              top: BorderSide(
+                color: Colors.black,
+                width: 1.0,
+              ),
+            )
+        ),
+          height: 60,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              IconButton(
+                icon: Icon(Icons.home),
+                onPressed: () {
+
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.add),
+                onPressed: () {
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.search),
+                onPressed: () {
+                },
+              ),
+            ],
+          ),
+        )
       )
     );
   }
